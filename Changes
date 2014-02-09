@@ -1,5 +1,6 @@
 {{$NEXT}}
         - Fix tests for 5.18
+        - Call to Class::MOP::load_class deprecated, call Class::Load directly
 
 0.10  2011-02-16
 		- bump dep on n::c
