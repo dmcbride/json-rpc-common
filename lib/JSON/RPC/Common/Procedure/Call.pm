@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::Procedure::Call;
+
 use Moose;
 # ABSTRACT: JSON RPC Procedure Call base class.
 

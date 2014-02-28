@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::TypeConstraints;
+
 # ABSTRACT: Type constraint library
 
 use strict;

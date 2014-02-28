@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common;
+
 # ABSTRACT: Transport agnostic JSON RPC helper objects
 
 __PACKAGE__

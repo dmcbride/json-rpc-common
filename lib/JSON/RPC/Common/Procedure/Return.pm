@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::Procedure::Return;
+
 use Moose;
 # ABSTRACT: JSON-RPC procedure return class
 

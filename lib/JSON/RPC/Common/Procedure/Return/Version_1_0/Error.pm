@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::Procedure::Return::Version_1_0::Error;
+
 use Moose;
 # ABSTRACT: JSON-RPC 1.0 error class.
 

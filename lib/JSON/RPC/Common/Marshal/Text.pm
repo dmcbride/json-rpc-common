@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::Marshal::Text;
+
 use Moose;
 # ABSTRACT: JSON text marshalling for L<JSON::RPC::Common>.
 

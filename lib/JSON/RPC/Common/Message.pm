@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::Message;
+
 use Moose::Role;
 # ABSTRACT: JSON-RPC message role
 

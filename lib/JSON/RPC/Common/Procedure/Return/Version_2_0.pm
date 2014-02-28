@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package JSON::RPC::Common::Procedure::Return::Version_2_0;
+
 use Moose;
 # ABSTRACT: JSON-RPC 2.0 Procedure Return
 
