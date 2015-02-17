@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Marshal::Text;
 
-use Moose;
+use Moo;
 # ABSTRACT: JSON text marshalling for L<JSON::RPC::Common>.
 
 use Carp qw(croak);

@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Procedure::Return;
 
-use Moose;
+use Moo;
 # ABSTRACT: JSON-RPC procedure return class
 
 use Carp qw(croak);

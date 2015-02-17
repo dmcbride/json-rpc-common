@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Procedure::Return::Error;
 
-use Moose;
+use Moo;
 # ABSTRACT: Base class for JSON-RPC errors
 
 use JSON::RPC::Common::TypeConstraints qw(JSONValue);

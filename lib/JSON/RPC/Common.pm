@@ -126,7 +126,7 @@ for an example
 
 =item *
 
-L<Moose> class to SMD translator
+L<Moo> class to SMD translator
 
 =item *
 

@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Procedure::Return::Version_1_1;
 
-use Moose;
+use Moo;
 # ABSTRACT: JSON-RPC 1.1 Procedure Return
 
 use JSON::RPC::Common::Procedure::Return::Version_1_1::Error;

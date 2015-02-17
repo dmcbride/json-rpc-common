@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Procedure::Call::Version_1_1;
 
-use Moose;
+use Moo;
 # ABSTRACT: JSON-RPC 1.1 Procedure Call
 
 use MRO::Compat;

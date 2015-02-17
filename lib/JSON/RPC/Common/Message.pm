@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Message;
 
-use Moose::Role;
+use Moo::Role;
 # ABSTRACT: JSON-RPC message role
 
 use Carp qw(croak);

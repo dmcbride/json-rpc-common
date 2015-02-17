@@ -2,7 +2,7 @@
 
 package JSON::RPC::Common::Procedure::Call;
 
-use Moose;
+use Moo;
 # ABSTRACT: JSON RPC Procedure Call base class.
 
 use Try::Tiny;
