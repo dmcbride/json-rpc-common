@@ -20,6 +20,7 @@ has json => (
 	is  => "rw",
 	handles => [qw(encode decode)],
 	lazy_build => 1,
+	builder => '_build_json',
 );
 
 sub _build_json {
