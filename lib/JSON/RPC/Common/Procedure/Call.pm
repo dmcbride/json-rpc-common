@@ -8,6 +8,7 @@ use Moo;
 use Try::Tiny;
 use JSON::RPC::Common::TypeConstraints qw(JSONValue);
 use JSON::RPC::Common::Procedure::Return;
+use Scalar::Util qw(blessed);
 
 use Carp qw(croak);
 

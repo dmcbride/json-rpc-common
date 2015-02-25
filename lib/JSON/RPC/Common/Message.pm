@@ -5,7 +5,7 @@ package JSON::RPC::Common::Message;
 use Moo::Role;
 # ABSTRACT: JSON-RPC message role
 
-use Carp qw(croak);
+use Carp qw(croak confess);
 use Class::Load qw();
 
 use namespace::clean -except => [qw(meta)];
