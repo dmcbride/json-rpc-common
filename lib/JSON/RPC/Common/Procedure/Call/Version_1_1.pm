@@ -8,7 +8,7 @@ use Moo;
 use MRO::Compat;
 
 use JSON::RPC::Common::TypeConstraints qw(JSONContainer);
-
+use Types::Standard qw(Bool);
 use JSON::RPC::Common::Procedure::Return::Version_1_1;
 
 use Carp qw(croak);
@@ -41,7 +41,7 @@ has '+version' => (
 );
 
 has alt_spec => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 0,
 );

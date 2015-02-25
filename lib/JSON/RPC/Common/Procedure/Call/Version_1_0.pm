@@ -6,7 +6,7 @@ use Moo;
 # ABSTRACT: JSON-RPC 1.0 request
 
 use JSON::RPC::Common::Procedure::Return::Version_1_0;
-
+use Types::Standard qw(ArrayRef);
 use namespace::clean -except => [qw(meta)];
 
 extends qw(JSON::RPC::Common::Procedure::Call);
@@ -17,7 +17,7 @@ has '+version' => (
 );
 
 has '+params' => (
-	isa => "ArrayRef",
+	isa => ArrayRef,
 	required => 1,
 );
 

@@ -6,6 +6,7 @@ use Moo;
 # ABSTRACT: Base class for JSON-RPC errors
 
 use JSON::RPC::Common::TypeConstraints qw(JSONValue);
+use Types::Standard qw(Int Str);
 
 use namespace::clean -except => [qw(meta)];
 
@@ -53,13 +54,13 @@ has data => (
 );
 
 has message => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	predicate => "has_message",
 );
 
 has code => (
-	isa => "Int",
+	isa => Int,
 	is  => "rw",
 	predicate => "has_code",
 );

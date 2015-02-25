@@ -7,6 +7,7 @@ use Moo;
 
 use Try::Tiny;
 use JSON::RPC::Common::TypeConstraints qw(JSONValue);
+use Types::Standard qw(ClassName Str Ref);
 use JSON::RPC::Common::Procedure::Return;
 use Scalar::Util qw(blessed);
 
@@ -17,25 +18,25 @@ use namespace::clean -except => [qw(meta)];
 with qw(JSON::RPC::Common::Message);
 
 has return_class => (
-	isa => "ClassName",
+	isa => ClassName,
 	is  => "rw",
 	default => "JSON::RPC::Common::Procedure::Return",
 );
 
 has error_class => (
-	isa => "ClassName",
+	isa => ClassName,
 	is  => "rw",
 	default => "JSON::RPC::Common::Procedure::Return::Error",
 );
 
 has version => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	predicate => "has_version",
 );
 
 has method => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	required => 1,
 );
@@ -47,7 +48,7 @@ has id => (
 );
 
 has params => (
-	isa => "Ref",
+	isa => Ref,
 	is  => "rw",
 	predicate => "has_params",
 );

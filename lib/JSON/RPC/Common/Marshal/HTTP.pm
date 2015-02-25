@@ -11,6 +11,7 @@ use Try::Tiny;
 use URI::QueryParam;
 use MIME::Base64 ();
 use HTTP::Response;
+use Types::Standard qw(Bool ClassName Object Str HashRef);
 
 use namespace::clean -except => [qw(meta)];
 
@@ -21,31 +22,32 @@ sub _build_json {
 }
 
 has prefer_get => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 0,
 );
 
 has rest_style_methods => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 1,
 );
 
 has prefer_encoded_get => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 1,
 );
 
 has expand => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 0,
 );
 
 has expander => (
-	isa => "ClassName|Object",
+	isa => ClassName|Object,
+	is => "ro",
 	lazy_build => 1,
 	handles => [qw(expand_hash collapse_hash)],
 );
@@ -57,7 +59,7 @@ sub _build_expander {
 
 
 has user_agent => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	lazy_build => 1,
 );
@@ -69,13 +71,13 @@ sub _build_user_agent {
 }
 
 has content_type => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	predicate => "has_content_type",
 );
 
 has content_types => (
-	isa => "HashRef[Str]",
+	isa => HashRef[Str],
 	is  => "rw",
 	lazy_build => 1,
 );
@@ -89,13 +91,13 @@ sub _build_content_types {
 }
 
 has accept_content_type => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	predicate => "has_accept_content_type",
 );
 
 has accept_content_types => (
-	isa => "HashRef[Str]",
+	isa => HashRef[Str],
 	is  => "rw",
 	lazy_build => 1,
 );

@@ -8,6 +8,7 @@ use Moo;
 use Carp qw(croak);
 
 use JSON::RPC::Common::TypeConstraints qw(JSONValue);
+use Types::Standard qw(Str Any ClassName);
 use JSON::RPC::Common::Procedure::Return::Error;
 
 use namespace::clean -except => [qw(meta)];
@@ -26,13 +27,13 @@ around new_from_data => sub {
 };
 
 has version => (
-	isa => "Str",
+	isa => Str,
 	is  => "rw",
 	predicate => "has_version",
 );
 
 has result => (
-	isa => "Any",
+	isa => Any,
 	is  => "rw",
 	predicate => "has_result",
 );
@@ -44,13 +45,14 @@ has id => (
 );
 
 has error_class => (
-	isa => "ClassName",
+	isa => ClassName,
 	is  => "rw",
 	default => "JSON::RPC::Common::Procedure::Return::Error",
 );
 
 has error => (
-	isa => "JSON::RPC::Common::Procedure::Return::Error",
+    isa => sub { croak 'Must be a JSON::RPC::Common::Procedure::Return::Error'
+                    unless $_[0]->isa('JSON::RPC::Common::Procedure::Return::Error') },
 	is  => "rw",
 	predicate => "has_error",
 );

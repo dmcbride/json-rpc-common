@@ -11,11 +11,12 @@ use JSON ();
 use JSON::RPC::Common::Message;
 use JSON::RPC::Common::Procedure::Call;
 use JSON::RPC::Common::Procedure::Return;
+use Types::Standard qw(Object ClassName);
 
 use namespace::clean -except => [qw(meta)];
 
 has json => (
-	isa => "Object",
+	isa => Object,
 	is  => "rw",
 	handles => [qw(encode decode)],
 	lazy_build => 1,
@@ -26,21 +27,21 @@ sub _build_json {
 }
 
 has message_class => (
-	isa => "ClassName",
+	isa => ClassName,
 	is  => "rw",
 	default => "JSON::RPC::Common::Message",
 	handles => { "inflate_message" => "inflate" },
 );
 
 has call_class => (
-	isa => "ClassName",
+	isa => ClassName,
 	is  => "rw",
 	default => "JSON::RPC::Common::Procedure::Call",
 	handles => { "inflate_call" => "inflate" },
 );
 
 has return_class => (
-	isa => "ClassName",
+	isa => ClassName,
 	is  => "rw",
 	default => "JSON::RPC::Common::Procedure::Return",
 	handles => { "inflate_return" => "inflate" },
