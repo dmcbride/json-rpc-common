@@ -2,6 +2,9 @@
 
 package JSON::RPC::Common;
 
+use strict;
+use warnings;
+
 # ABSTRACT: Transport agnostic JSON RPC helper objects
 
 __PACKAGE__
