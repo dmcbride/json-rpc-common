@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.11    2014-02-28
         - Fix tests for 5.18
         - Call to Class::MOP::load_class deprecated, call Class::Load directly
 
